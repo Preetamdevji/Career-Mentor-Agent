@@ -1,0 +1,27 @@
+[project]
+name = "career-mentor-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Preetamdevji", email = "111443852+Preetamdevji@users.noreply.github.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "google-generativeai>=0.8.5",
+    "openai-agents>=0.2.3",
+    "python-dotenv>=1.1.1",
+]
+
+[project.scripts]
+career-mentor-agent = "career_mentor_agent:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+directory = "src"
+
+[tool.hatch.build.targets.wheel]
+packages = ["career_mentor_agent"]
